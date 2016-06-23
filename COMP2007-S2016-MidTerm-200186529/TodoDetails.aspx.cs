@@ -52,8 +52,12 @@ namespace COMP2007_S2016_MidTerm_200186529
                 {
                     TodoNameTextBox.Text = updatedTodo.TodoName;
                     TodoNotesTextBox.Text = updatedTodo.TodoNotes;
-                    // Checkbox
-
+                    /*
+                    if (updatedTodo.Completed == true)
+                    {
+                        //todoCheckBox.Checked;
+                    }
+                    */
                 }
             }
         }
@@ -90,7 +94,7 @@ namespace COMP2007_S2016_MidTerm_200186529
                 // add data to the new todo record
                 newTodo.TodoName = TodoNameTextBox.Text;
                 newTodo.TodoNotes = TodoNotesTextBox.Text;
-                //newTodo.Completed = todoCheckBox.Checked;
+               // newTodo.Completed = todoCheckBox.Checked;
 
                 // insert new todo into the database
                 if (TodoID == 0)
