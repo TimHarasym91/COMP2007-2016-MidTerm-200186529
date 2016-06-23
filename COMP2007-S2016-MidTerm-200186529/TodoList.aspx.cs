@@ -78,7 +78,7 @@ namespace COMP2007_S2016_MidTerm_200186529
                 // save changes back to the db
                 db.SaveChanges();
 
-                // refresh the grid
+                // refresh
                 this.GetTodos();
             }
         }

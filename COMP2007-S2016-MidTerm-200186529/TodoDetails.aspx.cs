@@ -105,7 +105,7 @@ namespace COMP2007_S2016_MidTerm_200186529
                 // save our changes
                 db.SaveChanges();
 
-                // redirect back to the updated manage games page
+                // redirect back to the updated todolist
                 Response.Redirect("~/TodoList.aspx");
             }
         }           
