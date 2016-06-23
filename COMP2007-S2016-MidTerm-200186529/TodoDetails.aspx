@@ -14,10 +14,12 @@
                     <asp:TextBox runat="server" CssClass="form-control" ID="TodoNotesTextBox" placeholder="Notes" required="true"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <h4>Checkbox from hell goes here.</h4>
+                    <label class="control-label" for="todoCheckBox">Completed</label>
+                    <asp:CheckBox runat="server" ID="todoCheckBox"/> <%#Eval("Completed") %>
                 </div>
 
                 <div class="text-right">
+
                     <a href="/TodoList.aspx" class="btn btn-warning btn-lg">Cancel</a>
                     <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click"/>
                 </div>

@@ -45,6 +45,10 @@ namespace COMP2007_S2016_MidTerm_200186529
                 // bind the result to the DataList
                 TodoDataList.DataSource = Todos.ToList();
                 TodoDataList.DataBind();
+
+                // total todo's counter
+                var todoCount = (from allTodos in db.Todos select allTodos).Count();
+                countLabel.Text = "# of Todo's ="+todoCount;
             }
         }
 

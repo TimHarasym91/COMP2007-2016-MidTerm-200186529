@@ -8,6 +8,11 @@
             </div>
             <div class="panel-body">
                 <a href="/TodoDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add ToDo</a>
+                <div class="pull-right">
+                    <h4>
+                    <asp:Label runat="server" ID="countLabel" placeholder="# of Todo's"></asp:Label>
+                    </h4>
+                </div>
                 <asp:DataList ID="TodoDataList"
                     RepeatDirection="Horizontal"
                     RepeatLayout="Flow"
@@ -16,18 +21,18 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                <th>To Do Name</th>
-                                <th>To Do Notes</th>
-                                <th>Completed</th>
-                                <th>Edit</th>
-                                <th>Delte</th>
+                                <th><h3>To Do Name</h3></th>
+                                <th><h3>To Do Notes</h3></th>
+                                <th><h3>Completed</h3></th>
+                                <th><h3>Edit</h3></th>
+                                <th><h3>Delete</h3></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><h2><%#Eval("ToDoName") %></h2></td>
-                                    <td><h3><%#Eval("ToDoNotes") %></h3></td>
-                                    <td><%#Eval("Completed") %></td>
+                                    <td><h4><%#Eval("ToDoName") %></h4></td>
+                                    <td><p><%#Eval("ToDoNotes") %></p></td>
+                                    <td><asp:CheckBox runat="server" ID="todoCheckBox"/> <%#Eval("Completed") %></td>
                                     <td><a href='/TodoDetails.aspx?TodoID=<%#Eval("TodoID")%>' class="btn btn-primary btn-sm"><i class='fa fa-pencil-square-o fa-lg'></i>Edit</a></td>
                                     <td>
                                         <asp:LinkButton ID="DeleteButton" runat="server"
